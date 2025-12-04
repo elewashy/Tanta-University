@@ -4,9 +4,9 @@ A distributed chat system built with Go using RPC (Remote Procedure Call) for co
 
 ## Demo Video
 
-[![Demo Video](https://img.shields.io/badge/Watch-Demo%20Video-red?style=for-the-badge&logo=googledrive)](YOUR_VIDEO_LINK_HERE)
+[![Demo Video](https://img.shields.io/badge/Watch-Demo%20Video-red?style=for-the-badge&logo=googledrive)](https://drive.google.com/file/d/1nLSSE170dKaQdzgKLsG4hqNf4awR58k0/view?usp=sharing)
 
-> 📹 **[Click here to watch the demo video](YOUR_VIDEO_LINK_HERE)**
+> 📹 **[Click here to watch the demo video](https://drive.google.com/file/d/1nLSSE170dKaQdzgKLsG4hqNf4awR58k0/view?usp=sharing)**
 
 ---
 
