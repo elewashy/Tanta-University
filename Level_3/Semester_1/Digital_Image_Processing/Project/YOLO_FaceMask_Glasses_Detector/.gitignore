@@ -1,0 +1,374 @@
+# Face Mask & Glasses Detector - .gitignore
+
+# ============================================
+# Python
+# ============================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+data/
+Dataset/
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ============================================
+# PyTorch & Machine Learning
+# ============================================
+# Model weights (keep best.pt but ignore others)
+*.pt
+*.pth
+*.onnx
+*.pb
+*.h5
+*.keras
+!best.pt
+!model/best.pt
+
+# Training outputs
+runs/
+weights/
+checkpoints/
+logs/
+wandb/
+mlruns/
+
+# TensorBoard
+events.out.tfevents.*
+
+# ============================================
+# YOLOv5 Specific
+# ============================================
+# YOLOv5 outputs
+yolov5/runs/
+yolov5/weights/
+detect/
+train/
+val/
+
+# ============================================
+# Dataset & Data Files
+# ============================================
+# Large dataset files (uncomment if needed)
+# Dataset/images/*.jpg
+# Dataset/images/*.png
+# Dataset/labels/*.txt
+
+# Temporary data
+*.csv
+*.xlsx
+*.xls
+!requirements*.txt
+!classes.txt
+
+# Video files
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.flv
+*.wmv
+!video*.mp4
+
+# Image files (uncomment to ignore all images)
+# *.jpg
+# *.jpeg
+# *.png
+# *.gif
+# *.bmp
+# *.tiff
+
+# ============================================
+# IDE & Editors
+# ============================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================
+# Operating System
+# ============================================
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.directory
+.Trash-*
+.nfs*
+
+# ============================================
+# Project Specific
+# ============================================
+# Build artifacts
+build/
+dist/
+*.exe
+!dist/FaceMaskDetector.exe
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.bak
+*.backup
+
+# Output files
+output/
+results/
+detections/
+
+# Test files
+test_output/
+test_images/
+test_videos/
+
+# Cache
+.cache/
+*.cache
+
+# ============================================
+# Documentation (Optional)
+# ============================================
+# Uncomment if you don't want to track certain docs
+# docs/_build/
+# *.pdf
+
+# ============================================
+# Secrets & Credentials
+# ============================================
+# API keys and secrets
+.env
+.env.local
+.env.*.local
+secrets.json
+credentials.json
+*.key
+*.pem
+*.crt
+
+# ============================================
+# Miscellaneous
+# ============================================
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+!yolov5-master.zip
+
+# Lock files
+*.lock
+
+# Logs
+*.log
+logs/
+
+# Temporary Python files
+*.pyc
+*.pyo
+*.pyd
+
+# Node modules (if using any JS tools)
+node_modules/
+
+# Package files
+*.deb
+*.rpm
+
+# ============================================
+# Keep These Files
+# ============================================
+# Force include important files
+!README.md
+!requirements.txt
+!requirements_exe.txt
+!requirements_minimal.txt
+!.gitignore
+!LICENSE
+!best.pt
+!classes.txt
+!main.py
+!Detector.py
+!build_exe.py
+!build_exe_simple.py
