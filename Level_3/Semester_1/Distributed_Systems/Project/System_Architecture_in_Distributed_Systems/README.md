@@ -260,7 +260,6 @@ graph TB
     Choice -->|Get Started| QUICK[🚀 QUICKSTART.md<br/>Step-by-Step Guide]
     Choice -->|Understand Go| WHY[💡 WHY_GO.md<br/>Go for Distributed Systems]
     Choice -->|Go to Production| PROD[🏭 PRODUCTION_GUIDE.md<br/>Production Evolution]
-    Choice -->|Practice| EX[✏️ EXERCISES.md<br/>18+ Exercises]
     
     style Start fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
     style README fill:#ffd700,stroke:#333,stroke-width:2px,color:#000
@@ -278,13 +277,11 @@ graph TB
 | **[docs/QUICKSTART.md](docs/QUICKSTART.md)** | Step-by-step getting started guide |
 | **[docs/WHY_GO.md](docs/WHY_GO.md)** | Why Go is ideal for distributed systems |
 | **[docs/PRODUCTION_GUIDE.md](docs/PRODUCTION_GUIDE.md)** | Evolving to production |
-| **[docs/EXERCISES.md](docs/EXERCISES.md)** | 18+ learning exercises |
 
 ## 🎓 Next Steps
 
 1. **Run the System** - Follow the [Quick Start](#-running-the-system) above
 2. **Understand Architecture** - Read [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
-3. **Try Exercises** - Start with beginner exercises in [docs/EXERCISES.md](docs/EXERCISES.md)
 4. **Explore Production** - Learn production patterns in [docs/PRODUCTION_GUIDE.md](docs/PRODUCTION_GUIDE.md)
 
 ## 🌟 Key Features
