@@ -43,12 +43,12 @@ graph TB
     PaymentHandler -->|PaymentProcessed| EventBus
     EventBus -->|PaymentProcessed| NotifHandler
     
-    style API fill:#e1f5ff
-    style Service fill:#e1f5ff
-    style Repo fill:#e1f5ff
-    style EventBus fill:#fff4e1
-    style PaymentHandler fill:#f0e1ff
-    style NotifHandler fill:#e1ffe1
+    style API fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
+    style Service fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
+    style Repo fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
+    style EventBus fill:#ffd700,stroke:#333,stroke-width:2px,color:#000
+    style PaymentHandler fill:#a78bfa,stroke:#333,stroke-width:2px,color:#fff
+    style NotifHandler fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
 ```
 
 ## Detailed Event Flow
@@ -115,9 +115,9 @@ graph LR
         B --> C[Repository Layer<br/>Data Access]
     end
     
-    style A fill:#ff9999
-    style B fill:#99ccff
-    style C fill:#99ff99
+    style A fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style B fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
 ```
 
 **API Layer (Presentation)**
@@ -162,8 +162,8 @@ graph LR
     Client[Client] -->|HTTP Request| Server[Order Service]
     Server -->|HTTP Response| Client
     
-    style Client fill:#e1f5ff
-    style Server fill:#ffe1e1
+    style Client fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
+    style Server fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 **Characteristics:**
@@ -227,11 +227,11 @@ graph TB
     EventBus -->|Subscribe: OrderCreated| NotifConsumer
     EventBus -->|Subscribe: PaymentProcessed| NotifConsumer
     
-    style EventBus fill:#fff4e1
-    style OrderSvc fill:#e1f5ff
-    style PaymentSvc fill:#f0e1ff
-    style PaymentConsumer fill:#f0e1ff
-    style NotifConsumer fill:#e1ffe1
+    style EventBus fill:#ffd700,stroke:#333,stroke-width:2px,color:#000
+    style OrderSvc fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
+    style PaymentSvc fill:#a78bfa,stroke:#333,stroke-width:2px,color:#fff
+    style PaymentConsumer fill:#a78bfa,stroke:#333,stroke-width:2px,color:#fff
+    style NotifConsumer fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
 ```
 
 **Event Types:**
@@ -294,9 +294,9 @@ graph TB
     O3 -.->|Events| N2
     P3 -.->|Events| N2
     
-    style O1 fill:#e1f5ff
-    style P1 fill:#f0e1ff
-    style N1 fill:#e1ffe1
+    style O1 fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
+    style P1 fill:#a78bfa,stroke:#333,stroke-width:2px,color:#fff
+    style N1 fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
 ```
 
 **Service Characteristics:**
@@ -347,7 +347,7 @@ graph LR
     B -.->|Events| C[Payment Service]
     B -.->|Events| D[Notification Service]
     
-    style B fill:#fff4e1
+    style B fill:#ffd700,stroke:#333,stroke-width:2px,color:#000
 ```
 
 **How it's achieved:**
@@ -373,8 +373,8 @@ graph TB
     C -->|4. Async Processing| E[Payment Service]
     C -->|4. Async Processing| F[Notification Service]
     
-    style C fill:#fff4e1
-    style D fill:#e1f5ff
+    style C fill:#ffd700,stroke:#333,stroke-width:2px,color:#000
+    style D fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 **Key Points:**
@@ -395,9 +395,9 @@ graph TB
         E[Notification Service] -->|✅ Still Working| F[Send Order Confirmations]
     end
     
-    style A fill:#e1ffe1
-    style C fill:#ffe1e1
-    style E fill:#e1ffe1
+    style A fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
+    style C fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
 ```
 
 **Isolation Mechanisms:**
@@ -431,8 +431,8 @@ graph TB
     O2 --> EB
     O3 --> EB
     
-    style LB fill:#fff4e1
-    style EB fill:#fff4e1
+    style LB fill:#ffd700,stroke:#333,stroke-width:2px,color:#000
+    style EB fill:#ffd700,stroke:#333,stroke-width:2px,color:#000
 ```
 
 **Scaling Strategies:**
@@ -451,11 +451,11 @@ graph LR
     A -->|spawn| D[Goroutine 3]
     A -->|spawn| E[Goroutine N]
     
-    style A fill:#e1f5ff
-    style B fill:#e1ffe1
-    style C fill:#e1ffe1
-    style D fill:#e1ffe1
-    style E fill:#e1ffe1
+    style A fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
+    style B fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
+    style C fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
+    style D fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
+    style E fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
 ```
 
 **Implementation:**
@@ -547,12 +547,12 @@ graph LR
     B -.->|Replace with| E
     C -.->|Replace with| F
     
-    style A fill:#ffe1e1
-    style B fill:#ffe1e1
-    style C fill:#ffe1e1
-    style D fill:#e1ffe1
-    style E fill:#e1ffe1
-    style F fill:#e1ffe1
+    style A fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style B fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
+    style E fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
+    style F fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
 ```
 
 ### What's Production-Ready
@@ -609,8 +609,8 @@ graph TB
     E --> F[Add to docker-compose.yml]
     F --> G[Test Integration]
     
-    style A fill:#e1f5ff
-    style G fill:#e1ffe1
+    style A fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
+    style G fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
 ```
 
 ### Adding a New Event Type
@@ -621,8 +621,8 @@ graph LR
     B --> C[Subscribe in Consumers]
     C --> D[Implement Handlers]
     
-    style A fill:#e1f5ff
-    style D fill:#e1ffe1
+    style A fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
 ```
 
 ## Conclusion

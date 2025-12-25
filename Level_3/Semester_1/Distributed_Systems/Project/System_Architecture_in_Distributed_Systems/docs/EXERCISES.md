@@ -14,11 +14,11 @@ graph TB
     Advanced -.->|8 exercises| A1[Production Features]
     Challenge -.->|5 exercises| C1[Complex Patterns]
     
-    style Start fill:#e1f5ff
-    style Beginner fill:#e1ffe1
-    style Intermediate fill:#fff4e1
-    style Advanced fill:#ffe1e1
-    style Challenge fill:#f0e1ff
+    style Start fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
+    style Beginner fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
+    style Intermediate fill:#ffd700,stroke:#333,stroke-width:2px,color:#000
+    style Advanced fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style Challenge fill:#a78bfa,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 ## Difficulty Levels
@@ -114,8 +114,8 @@ graph TB
     Payment -->|PaymentProcessed| EventBus
     EventBus -->|PaymentProcessed| Notification
     
-    style Inventory fill:#e1ffe1
-    style EventBus fill:#fff4e1
+    style Inventory fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
+    style EventBus fill:#ffd700,stroke:#333,stroke-width:2px,color:#000
 ```
 
 **Tasks:**
@@ -291,11 +291,11 @@ graph TB
     Gateway -.-> Log
     Gateway -.-> Route
     
-    style Gateway fill:#fff4e1
-    style Auth fill:#ffe1e1
-    style Rate fill:#ffe1e1
-    style Log fill:#ffe1e1
-    style Route fill:#ffe1e1
+    style Gateway fill:#ffd700,stroke:#333,stroke-width:2px,color:#000
+    style Auth fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style Rate fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style Log fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style Route fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 **Tasks:**
@@ -481,9 +481,9 @@ graph TB
     
     Events -.->|Sync| ReadModel
     
-    style WriteModel fill:#ffe1e1
-    style ReadModel fill:#e1ffe1
-    style Events fill:#fff4e1
+    style WriteModel fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style ReadModel fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
+    style Events fill:#ffd700,stroke:#333,stroke-width:2px,color:#000
 ```
 
 **Tasks:**

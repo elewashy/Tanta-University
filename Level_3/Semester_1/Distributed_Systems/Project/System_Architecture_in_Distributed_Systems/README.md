@@ -66,8 +66,8 @@ graph TB
     Payment -->|PaymentProcessed| EventBus
     EventBus -->|PaymentProcessed| Notification
     
-    style EventBus fill:#fff4e1
-    style Client fill:#e1f5ff
+    style EventBus fill:#ffd700,stroke:#333,stroke-width:2px,color:#000
+    style Client fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 ### Services
@@ -122,11 +122,11 @@ graph LR
     G[Scalability] --> H[Horizontal scaling per service]
     I[Service Boundaries] --> J[Clear responsibilities]
     
-    style A fill:#e1f5ff
-    style C fill:#fff4e1
-    style E fill:#ffe1e1
-    style G fill:#e1ffe1
-    style I fill:#f0e1ff
+    style A fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#ffd700,stroke:#333,stroke-width:2px,color:#000
+    style E fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style G fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
+    style I fill:#a78bfa,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 - **Loose Coupling** - Services communicate via events, not direct calls
@@ -193,10 +193,10 @@ graph TB
     ED -.-> ED1
     MS -.-> MS1
     
-    style L fill:#e1f5ff
-    style CS fill:#fff4e1
-    style ED fill:#ffe1e1
-    style MS fill:#e1ffe1
+    style L fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
+    style CS fill:#ffd700,stroke:#333,stroke-width:2px,color:#000
+    style ED fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style MS fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
 ```
 
 | Pattern | Implementation |
@@ -234,11 +234,11 @@ graph LR
     Demo -.->|Replace with| Prod3[NATS]
     Demo -.->|Replace with| Prod4[Redis Streams]
     
-    style Demo fill:#ffe1e1
-    style Prod1 fill:#e1ffe1
-    style Prod2 fill:#e1ffe1
-    style Prod3 fill:#e1ffe1
-    style Prod4 fill:#e1ffe1
+    style Demo fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style Prod1 fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
+    style Prod2 fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
+    style Prod3 fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
+    style Prod4 fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
 ```
 
 - **Kafka** - High-throughput, distributed event streaming
@@ -262,13 +262,13 @@ graph TB
     Choice -->|Go to Production| PROD[🏭 PRODUCTION_GUIDE.md<br/>Production Evolution]
     Choice -->|Practice| EX[✏️ EXERCISES.md<br/>18+ Exercises]
     
-    style Start fill:#e1f5ff
-    style README fill:#fff4e1
-    style ARCH fill:#ffe1e1
-    style QUICK fill:#e1ffe1
-    style WHY fill:#f0e1ff
-    style PROD fill:#ffe1f0
-    style EX fill:#e1fff5
+    style Start fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
+    style README fill:#ffd700,stroke:#333,stroke-width:2px,color:#000
+    style ARCH fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style QUICK fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
+    style WHY fill:#a78bfa,stroke:#333,stroke-width:2px,color:#fff
+    style PROD fill:#ff6bcf,stroke:#333,stroke-width:2px,color:#fff
+    style EX fill:#20c997,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 | Document | Purpose |

@@ -9,8 +9,8 @@ graph LR
     C --> D[Test System]
     D --> E[Explore & Learn]
     
-    style A fill:#e1f5ff
-    style E fill:#e1ffe1
+    style A fill:#4a9eff,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
 ```
 
 ## Prerequisites

@@ -29,8 +29,8 @@ graph TB
     T1 -.->|10,000 threads<br/>= 10GB| Heavy[Heavy Memory Usage]
     G1 -.->|10,000 goroutines<br/>= 20MB| Light[Light Memory Usage]
     
-    style Heavy fill:#ffe1e1
-    style Light fill:#e1ffe1
+    style Heavy fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style Light fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
 ```
 
 ```go
@@ -103,10 +103,10 @@ graph LR
         Deps --> JRun
     end
     
-    style Binary fill:#e1ffe1
-    style Run fill:#e1ffe1
-    style JVM fill:#ffe1e1
-    style JRun fill:#ffe1e1
+    style Binary fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
+    style Run fill:#51cf66,stroke:#333,stroke-width:2px,color:#000
+    style JVM fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style JRun fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 ```bash
