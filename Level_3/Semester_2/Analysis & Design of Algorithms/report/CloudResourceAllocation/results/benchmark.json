@@ -1,0 +1,185 @@
+{
+  "primary": {
+    "config": {
+      "n_tasks": 50,
+      "n_servers": 5,
+      "cpu_cap": 16,
+      "ram_cap": 32
+    },
+    "results": {
+      "DP": {
+        "placed": 20,
+        "total": 50,
+        "priority_score": 147,
+        "avg_cpu_util": 95,
+        "avg_ram_util": 98.8,
+        "cpu_imbalance": 18.8,
+        "per_server_cpu": {
+          "S1": 100,
+          "S2": 93.8,
+          "S3": 100,
+          "S4": 81.3,
+          "S5": 100
+        },
+        "per_server_ram": {
+          "S1": 100,
+          "S2": 100,
+          "S3": 100,
+          "S4": 100,
+          "S5": 93.8
+        },
+        "time_ms": 0.64528
+      },
+      "Greedy": {
+        "placed": 16,
+        "total": 50,
+        "priority_score": 124,
+        "avg_cpu_util": 82.5,
+        "avg_ram_util": 90.6,
+        "cpu_imbalance": 50,
+        "per_server_cpu": {
+          "S1": 93.8,
+          "S2": 100,
+          "S3": 87.5,
+          "S4": 81.3,
+          "S5": 50
+        },
+        "per_server_ram": {
+          "S1": 100,
+          "S2": 59.4,
+          "S3": 93.8,
+          "S4": 100,
+          "S5": 100
+        },
+        "time_ms": 0.002213
+      },
+      "Heuristic": {
+        "placed": 16,
+        "total": 50,
+        "priority_score": 133,
+        "avg_cpu_util": 80,
+        "avg_ram_util": 97.5,
+        "cpu_imbalance": 31.3,
+        "per_server_cpu": {
+          "S1": 75,
+          "S2": 75,
+          "S3": 93.8,
+          "S4": 62.5,
+          "S5": 93.8
+        },
+        "per_server_ram": {
+          "S1": 96.9,
+          "S2": 100,
+          "S3": 100,
+          "S4": 96.9,
+          "S5": 93.8
+        },
+        "time_ms": 0.005503
+      }
+    }
+  },
+  "scalability": {
+    "100": {
+      "DP": {
+        "time_ms": 2.3986666666666667,
+        "placed": 45,
+        "total": 100
+      },
+      "Greedy": {
+        "time_ms": 0.008538,
+        "placed": 31,
+        "total": 100
+      },
+      "Heuristic": {
+        "time_ms": 0.007564,
+        "placed": 35,
+        "total": 100
+      }
+    },
+    "1000": {
+      "DP": {
+        "time_ms": 212.5246,
+        "placed": 448,
+        "total": 1000
+      },
+      "Greedy": {
+        "time_ms": 0.239852,
+        "placed": 345,
+        "total": 1000
+      },
+      "Heuristic": {
+        "time_ms": 0.511434,
+        "placed": 383,
+        "total": 1000
+      }
+    },
+    "20": {
+      "DP": {
+        "time_ms": 0.179,
+        "placed": 11,
+        "total": 20
+      },
+      "Greedy": {
+        "time_ms": 0.030978,
+        "placed": 9,
+        "total": 20
+      },
+      "Heuristic": {
+        "time_ms": 0.01016,
+        "placed": 9,
+        "total": 20
+      }
+    },
+    "200": {
+      "DP": {
+        "time_ms": 8.438366666666665,
+        "placed": 94,
+        "total": 200
+      },
+      "Greedy": {
+        "time_ms": 0.024074,
+        "placed": 71,
+        "total": 200
+      },
+      "Heuristic": {
+        "time_ms": 0.030838,
+        "placed": 72,
+        "total": 200
+      }
+    },
+    "50": {
+      "DP": {
+        "time_ms": 0.3643333333333333,
+        "placed": 20,
+        "total": 50
+      },
+      "Greedy": {
+        "time_ms": 0,
+        "placed": 16,
+        "total": 50
+      },
+      "Heuristic": {
+        "time_ms": 0.010948,
+        "placed": 16,
+        "total": 50
+      }
+    },
+    "500": {
+      "DP": {
+        "time_ms": 56.8222,
+        "placed": 227,
+        "total": 500
+      },
+      "Greedy": {
+        "time_ms": 0.076978,
+        "placed": 173,
+        "total": 500
+      },
+      "Heuristic": {
+        "time_ms": 0.156078,
+        "placed": 186,
+        "total": 500
+      }
+    }
+  }
+}

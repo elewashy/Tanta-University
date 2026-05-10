@@ -1,0 +1,614 @@
+/* ═══════════════════════════════════════════════════════════
+   Cloud Resource Allocation Report — Stylesheet
+   Professional academic blog-style layout, print-ready.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Reset & Base ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root {
+    --font-serif:   'Merriweather', Georgia, serif;
+    --font-sans:    'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    --font-mono:    'Fira Code', 'Consolas', monospace;
+
+    --clr-bg:       #fdfdfd;
+    --clr-text:     #1e293b;
+    --clr-muted:    #64748b;
+    --clr-accent:   #2563eb;
+    --clr-accent-2: #7c3aed;
+    --clr-success:  #16a34a;
+    --clr-warning:  #f59e0b;
+    --clr-danger:   #dc2626;
+    --clr-border:   #e2e8f0;
+    --clr-surface:  #f8fafc;
+
+    --max-w: 780px;
+    --space: 1.4rem;
+}
+
+html { font-size: 15px; scroll-behavior: smooth; }
+body {
+    font-family: var(--font-sans);
+    color: var(--clr-text);
+    background: var(--clr-bg);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── Title Page ── */
+.title-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+    color: #fff;
+    page-break-after: always;
+}
+
+.university-badge {
+    font-size: 3.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.uni-name {
+    font-family: var(--font-serif);
+    font-size: 1.9rem;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+}
+
+.faculty {
+    font-size: 1rem;
+    color: #94a3b8;
+    margin-top: 0.2rem;
+}
+
+.title-divider {
+    width: 100px;
+    height: 3px;
+    background: var(--clr-accent);
+    margin: 2rem auto;
+    border-radius: 3px;
+}
+
+.report-title {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    max-width: 600px;
+}
+
+.report-subtitle {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    margin-top: 0.8rem;
+    max-width: 500px;
+}
+
+.title-meta {
+    margin-top: 2.5rem;
+}
+
+.meta-table {
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9rem;
+}
+.meta-table td {
+    padding: 0.25rem 0.8rem;
+    vertical-align: top;
+}
+.meta-label {
+    font-weight: 700;
+    color: #93c5fd;
+    white-space: nowrap;
+}
+
+/* ── Table of Contents ── */
+.toc {
+    max-width: var(--max-w);
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    page-break-after: always;
+}
+.toc h2 {
+    font-family: var(--font-serif);
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+.toc ol {
+    padding-left: 1.3rem;
+}
+.toc ol ol {
+    margin-top: 0.2rem;
+}
+.toc li {
+    margin: 0.25rem 0;
+    font-size: 0.92rem;
+}
+.toc a {
+    color: var(--clr-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.toc a:hover { text-decoration: underline; }
+
+/* ── Chapters ── */
+.chapter {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 1.8rem 1.5rem;
+    page-break-before: always;
+}
+
+.chapter h2 {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 3px solid var(--clr-accent);
+    color: var(--clr-text);
+}
+
+.chapter-num {
+    color: var(--clr-accent);
+    margin-right: 0.35rem;
+}
+
+.chapter h3 {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    margin-top: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--clr-accent-2);
+}
+
+.chapter h4 {
+    font-size: 0.98rem;
+    font-weight: 700;
+    margin-top: 1.1rem;
+    margin-bottom: 0.35rem;
+    color: var(--clr-text);
+}
+
+.chapter p {
+    margin-bottom: 0.7rem;
+    text-align: justify;
+    hyphens: auto;
+    font-size: 0.93rem;
+}
+
+.chapter ul, .chapter ol {
+    margin: 0.3rem 0 0.9rem 1.5rem;
+    font-size: 0.93rem;
+}
+.chapter li {
+    margin-bottom: 0.25rem;
+}
+
+/* ── Sub-chapters (algorithms) ── */
+.sub-chapter {
+    margin-top: 1.4rem;
+    padding: 1rem 1.3rem;
+    background: var(--clr-surface);
+    border-left: 4px solid var(--clr-accent);
+    border-radius: 0 8px 8px 0;
+}
+
+.sub-chapter:nth-child(3) { border-left-color: var(--clr-accent-2); }
+.sub-chapter:nth-child(4) { border-left-color: var(--clr-success); }
+
+/* ── Code Blocks (VS Code Dark+ theme) ── */
+.code-block {
+    margin: 0.8rem 0 1.2rem;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #2d2d2d;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.code-block .code-title {
+    background: #2d2d2d;
+    color: #9d9d9d;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 0.35rem 0.8rem 0.35rem 4rem;
+    position: relative;
+    border-bottom: 1px solid #3e3e3e;
+}
+.code-block .code-title::before {
+    content: '';
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: #f14c4c;
+    box-shadow: 18px 0 0 #f5a623, 36px 0 0 #23d160;
+}
+.code-block pre {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 0.8rem 1rem;
+    margin: 0;
+    border-radius: 0;
+    overflow-x: auto;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    tab-size: 4;
+}
+.code-block pre code {
+    font-family: var(--font-mono);
+    background: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+/* VS Code syntax colours */
+.kw  { color: #569cd6; }
+.fn  { color: #dcdcaa; }
+.str { color: #ce9178; }
+.cmt { color: #6a9955; font-style: italic; }
+.num { color: #b5cea8; }
+.op  { color: #d4d4d4; }
+.typ { color: #4ec9b0; }
+.var { color: #9cdcfe; }
+
+/* Legacy pre (fallback for any plain <pre> without wrapper) */
+pre {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    margin: 0.8rem 0 1.2rem;
+}
+pre code {
+    font-family: var(--font-mono);
+}
+
+/* Inline code */
+code {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    background: #f1f5f9;
+    padding: 0.12em 0.35em;
+    border-radius: 3px;
+    color: var(--clr-accent-2);
+}
+pre code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+/* ── Tables ── */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+}
+.data-table caption {
+    caption-side: bottom;
+    text-align: left;
+    padding: 0.35rem 0;
+    font-size: 0.78rem;
+    color: var(--clr-muted);
+    font-style: italic;
+}
+.data-table thead th {
+    background: #1e293b;
+    color: #fff;
+    text-align: left;
+    padding: 0.5rem 0.8rem;
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
+}
+.data-table tbody td {
+    padding: 0.45rem 0.8rem;
+    border-bottom: 1px solid var(--clr-border);
+}
+.data-table tbody tr:nth-child(even) {
+    background: var(--clr-surface);
+}
+.data-table tbody tr:hover {
+    background: #e0e7ff;
+}
+
+/* Rating colours in comparison table */
+.rating.good  { color: var(--clr-success); font-weight: 700; }
+.rating.medium { color: var(--clr-warning); font-weight: 600; }
+.rating.poor  { color: var(--clr-danger);  font-weight: 700; }
+
+/* ── Info Box ── */
+.info-box {
+    background: #eff6ff;
+    border-left: 4px solid var(--clr-accent);
+    padding: 0.7rem 1rem;
+    margin: 0.8rem 0;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.88rem;
+}
+
+/* ── Key Takeaway ── */
+.key-takeaway {
+    background: #f0fdf4;
+    border: 2px solid var(--clr-success);
+    border-radius: 8px;
+    padding: 0.9rem 1.2rem;
+    margin: 1.2rem 0;
+    font-size: 0.93rem;
+}
+
+/* ── Figures & Charts ── */
+figure {
+    margin: 1rem 0 1.3rem;
+    text-align: center;
+}
+figure img {
+    max-width: 100%;
+    max-height: 350px;
+    border-radius: 6px;
+    border: 1px solid var(--clr-border);
+}
+figcaption {
+    font-size: 0.78rem;
+    color: var(--clr-muted);
+    font-style: italic;
+    margin-top: 0.35rem;
+}
+.diagram-placeholder.missing {
+    background: var(--clr-surface);
+    border: 2px dashed var(--clr-border);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+.diagram-placeholder.missing img { display: none; }
+.diagram-placeholder.missing::before {
+    content: '📊 Diagram — run generate_visuals.py to create this image.';
+    color: var(--clr-muted);
+    font-style: italic;
+}
+
+.chart-container {
+    max-width: 600px;
+    margin: 1rem auto 1.3rem;
+}
+.chart-container canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* ── Case Studies ── */
+.case-studies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin: 1rem 0;
+}
+.case-study {
+    padding: 0.9rem;
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: 6px;
+    font-size: 0.88rem;
+}
+.case-study h4 {
+    margin-top: 0;
+    color: var(--clr-accent);
+}
+
+/* ── References ── */
+.references-list li {
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* ── Footer ── */
+footer {
+    max-width: var(--max-w);
+    margin: 1.5rem auto;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.78rem;
+    color: var(--clr-muted);
+    border-top: 1px solid var(--clr-border);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PRINT STYLES — comprehensive for Ctrl+P PDF export
+   ═══════════════════════════════════════════════════════════ */
+@media print {
+    html { font-size: 9.5pt; }
+    body {
+        background: #fff;
+        color: #000;
+        line-height: 1.45;
+    }
+
+    /* ── Title page ── */
+    .title-page {
+        min-height: auto;
+        padding: 2.5cm 2cm;
+        background: #1e293b !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        page-break-after: always;
+    }
+
+    /* ── Table of contents ── */
+    .toc {
+        padding: 1cm 1.5cm;
+        page-break-after: always;
+        border: 1px solid #ccc;
+        margin: 0 auto;
+    }
+    .toc li { font-size: 9pt; margin: 0.15rem 0; }
+
+    /* ── Chapters ── */
+    .chapter {
+        padding: 0.5cm 0;
+        max-width: 100%;
+        page-break-before: always;
+    }
+    .chapter h2 { font-size: 14pt; margin-bottom: 0.4cm; }
+    .chapter h3 { font-size: 11.5pt; margin-top: 0.5cm; margin-bottom: 0.2cm; }
+    .chapter h4 { font-size: 10pt; margin-top: 0.4cm; margin-bottom: 0.15cm; }
+    .chapter p  { font-size: 9pt; margin-bottom: 0.25cm; }
+    .chapter ul, .chapter ol { font-size: 9pt; margin: 0.15cm 0 0.4cm 1.2cm; }
+    .chapter li { margin-bottom: 0.1cm; }
+
+    /* ── Sub-chapters: allow page breaks inside ── */
+    .sub-chapter {
+        border-left-width: 3px;
+        padding: 0.4cm 0.6cm;
+        margin-top: 0.4cm;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        /* Do NOT set break-inside:avoid — they're too long */
+    }
+
+    /* ── Code blocks ── */
+    .code-block {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        border: 1px solid #555;
+        margin: 0.3cm 0;
+    }
+    .code-block .code-title {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        font-size: 6.5pt;
+        padding: 0.15cm 0.4cm 0.15cm 1.6cm;
+    }
+    .code-block .code-title::before {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .code-block pre {
+        border: none;
+        font-size: 6.5pt;
+        line-height: 1.45;
+        padding: 0.3cm 0.5cm;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    pre {
+        font-size: 7pt;
+        page-break-inside: avoid;
+        border: 1px solid #ccc;
+    }
+
+    /* ── Tables ── */
+    .data-table {
+        font-size: 8pt;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin: 0.3cm 0;
+    }
+    .data-table thead th {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        padding: 0.15cm 0.3cm;
+        font-size: 7.5pt;
+    }
+    .data-table tbody td {
+        padding: 0.12cm 0.3cm;
+    }
+    .data-table caption { font-size: 7pt; }
+
+    /* ── Figures & Charts ── */
+    figure {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        margin: 0.3cm 0;
+    }
+    figcaption { font-size: 7pt; }
+
+    .chart-container {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        max-width: 100%;
+        margin: 0.3cm auto;
+    }
+    .chart-container canvas {
+        max-height: 250px;
+    }
+
+    .diagram-placeholder {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    .diagram-placeholder img {
+        max-height: 280px;
+        width: auto;
+    }
+
+    /* ── Case studies ── */
+    .case-studies {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.3cm;
+    }
+    .case-study {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        border: 1px solid #ccc;
+        padding: 0.3cm;
+        font-size: 8pt;
+    }
+
+    /* ── Misc ── */
+    .info-box, .key-takeaway {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        break-inside: avoid;
+        font-size: 8.5pt;
+        padding: 0.3cm 0.5cm;
+        margin: 0.25cm 0;
+    }
+
+    .rating.good, .rating.medium, .rating.poor {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    a { color: #000; text-decoration: none; }
+
+    footer {
+        page-break-before: avoid;
+        border-top: 1px solid #ccc;
+        font-size: 7pt;
+        padding: 0.3cm 0;
+    }
+
+    /* ── Syntax highlight colours must survive print ── */
+    .kw, .fn, .str, .cmt, .num, .op, .typ, .var {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+    html { font-size: 14px; }
+    .chapter { padding: 1.2rem 0.8rem; }
+    .case-studies { grid-template-columns: 1fr; }
+    .report-title { font-size: 1.5rem; }
+}
